@@ -1,0 +1,115 @@
+/* Popup Overlay */
+#newRecordModal {
+    transition: opacity 0.3s ease; /* Smooth fade-in/out */
+  }
+  
+  #newRecordModal.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks through hidden popup */
+  }
+  
+  /* Popup Container */
+  #newRecordModal .popup {
+    background-color: white;
+    padding: 25px; /* Increased padding for a more spacious feel */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    width: 600px; /* Adjust width as needed */
+    max-width: 90%; /* Ensure responsiveness on smaller screens */
+  }
+  
+  /* Heading */
+  #newRecordModal h2 {
+    font-size: 1.6rem;  /* Slightly larger heading */
+    font-weight: 600; /* Medium weight for a modern look */
+    color: #333; /* Dark gray */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Styles */
+  #newRecordForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem; /* Slightly smaller label text */
+    color: #555; /* Medium gray */
+  }
+  
+  #newRecordForm input,
+  #newRecordForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 6px;  /* More rounded corners */
+    box-sizing: border-box;
+    font-size: 0.9rem; /* Slightly smaller input text */
+  }
+  
+  #newRecordForm input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5); /* Darken the date picker icon */
+  }
+  
+  /* Grid Layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  /* Buttons */
+  #newRecordForm button,
+  #closeModalBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Add smooth transition on hover */
+  }
+  
+  #newRecordForm button[type="submit"] {
+    background-color: #f59e0b; /* Yellow */
+    color: white;
+  }
+  
+  #newRecordForm button[type="submit"]:hover {
+    background-color: #d97706; /* Darker yellow on hover */
+  }
+  
+  #closeModalBtn {
+    background-color: #dc3545; /* Red */
+    color: white;
+  }
+  
+  #closeModalBtn:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    #newRecordModal .popup {
+      background-color: #2d3748; /* Dark blue background */
+      color: white;
+    }
+  
+    #newRecordForm label {
+      color: #a0aec0; /* Light gray for labels in dark mode */
+    }
+  
+    #newRecordForm input,
+    #newRecordForm select {
+      background-color: #1a202c; /* Darker input background */
+      border-color: #4a5568; /* Darker border */
+      color: white;
+    }
+  
+    #newRecordForm button[type="submit"]:hover {
+      background-color: #b79400; /* Lighter yellow on hover */
+    }
+  
+    #closeModalBtn:hover {
+      background-color: #991b1b; /* Lighter red on hover */
+    }
+  }
+  
